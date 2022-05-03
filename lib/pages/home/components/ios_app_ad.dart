@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
@@ -35,8 +36,9 @@ class IosAppAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "assets/ios.png",
+                      "assets/insta-ios-1.png",
                       // Set width for image on smaller screen
+                      height: 400,
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),
                   ),
@@ -47,19 +49,17 @@ class IosAppAd extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "IOS APP",
-                          style: GoogleFonts.oswald(
+                          "Post Insights",
+                          style: AppTextStyle.standard.copyWith(
                             color: kPrimaryColor,
                             fontWeight: FontWeight.w900,
-                            fontSize: 16.0,
                           ),
                         ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
+                        SizedBox(height: 15.0),
                         Text(
-                          "UNIVERSAL\nSMART HOME APP",
-                          style: GoogleFonts.oswald(
+                          "محتوا هدفمند",
+                          style: AppTextStyle.head.copyWith(
+                            fontFamily: AppTextStyle.peydaFont,
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
                             height: 1.3,
@@ -70,7 +70,7 @@ class IosAppAd extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that. This should be long enough",
+                          "اینجا یک پست آموزشی در حوزه دکوراسیون داخلی رو داریم که در 3 ساعت موفق به جذب از اکسپلور شده و  تعامل بالایی رو ازین پست برای خودش کرده  و اما کاور ,موضوع محتوا ، ادیت و موزیک ، کپشن ، هشتگ ، ساعت انتشار باعث این عملکرد از محتوامون شده.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -80,65 +80,65 @@ class IosAppAd extends StatelessWidget {
                         SizedBox(
                           height: 25.0,
                         ),
-                        Row(
-                          children: [
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: kPrimaryColor,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 28.0,
-                                ),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "EXPLORE MORE",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                    color: kPrimaryColor,
-                                  ),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(horizontal: 28.0),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "NEXT APP",
-                                      style: TextStyle(
-                                        color: kPrimaryColor,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        )
+                        // Row(
+                        //   children: [
+                        //     MouseRegion(
+                        //       cursor: SystemMouseCursors.click,
+                        //       child: Container(
+                        //         decoration: BoxDecoration(
+                        //           color: kPrimaryColor,
+                        //           borderRadius: BorderRadius.circular(8.0),
+                        //         ),
+                        //         height: 48.0,
+                        //         padding: EdgeInsets.symmetric(
+                        //           horizontal: 28.0,
+                        //         ),
+                        //         child: TextButton(
+                        //           onPressed: () {},
+                        //           child: Center(
+                        //             child: Text(
+                        //               "EXPLORE MORE",
+                        //               style: TextStyle(
+                        //                 color: Colors.white,
+                        //                 fontSize: 13.0,
+                        //                 fontWeight: FontWeight.bold,
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     ),
+                        //     SizedBox(
+                        //       width: 10.0,
+                        //     ),
+                        //     MouseRegion(
+                        //       cursor: SystemMouseCursors.click,
+                        //       child: Container(
+                        //         decoration: BoxDecoration(
+                        //           borderRadius: BorderRadius.circular(8.0),
+                        //           border: Border.all(
+                        //             color: kPrimaryColor,
+                        //           ),
+                        //         ),
+                        //         height: 48.0,
+                        //         padding: EdgeInsets.symmetric(horizontal: 28.0),
+                        //         child: TextButton(
+                        //           onPressed: () {},
+                        //           child: Center(
+                        //             child: Text(
+                        //               "NEXT APP",
+                        //               style: TextStyle(
+                        //                 color: kPrimaryColor,
+                        //                 fontSize: 13.0,
+                        //                 fontWeight: FontWeight.bold,
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )
+                        //   ],
+                        // )
                       ],
                     ),
                   )

@@ -9,8 +9,8 @@ import 'package:web_portfolio/pages/home/components/ios_app_ad.dart';
 import 'package:web_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:web_portfolio/pages/home/components/skill_section.dart';
 import 'package:web_portfolio/pages/home/components/sponsors.dart';
-import 'package:web_portfolio/pages/home/components/testimonial_widget.dart';
-import 'package:web_portfolio/pages/home/components/website_ad.dart';
+// import 'package:web_portfolio/pages/home/components/testimonial_widget.dart';
+// import 'package:web_portfolio/pages/home/components/website_ad.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
 
@@ -74,39 +74,30 @@ class Home extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                child: Header(),
-              ),
-              Carousel(),
-              SizedBox(
-                height: 20.0,
-              ),
+              Container(child: Header()),
+              Directionality(
+                  textDirection: TextDirection.rtl, child: Carousel()),
+              const SizedBox(height: 50.0),
+              /// CV section
               CvSection(),
-              IosAppAd(),
-              SizedBox(
-                height: 70.0,
-              ),
-              WebsiteAd(),
+              const SizedBox(height: 50.0),
+              /// iOS instagram phone
+              Directionality(
+                  textDirection: TextDirection.rtl, child: IosAppAd()),
+              const SizedBox(height: 20.0),
+              // WebsiteAd(),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: PortfolioStats(),
               ),
-              SizedBox(
-                height: 50.0,
-              ),
-              EducationSection(),
-              SizedBox(
-                height: 50.0,
-              ),
+              const SizedBox(height: 50.0),
               SkillSection(),
-              SizedBox(
-                height: 50.0,
-              ),
+              const SizedBox(height: 10.0),
               Sponsors(),
-              SizedBox(
-                height: 50.0,
-              ),
-              TestimonialWidget(),
+              const SizedBox(height: 50.0),
+              EducationSection(),
+              const SizedBox(height: 50.0),
+              // TestimonialWidget(),
               Footer(),
             ],
           ),

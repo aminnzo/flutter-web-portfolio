@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
-final List<String> sponsorsLogo = [
-  "assets/brand1.png",
-  "assets/brand2.png",
-  "assets/brand3.png",
-  "assets/brand4.png",
-  "assets/brand5.png",
+final List<String> tools = [
+  "Instagram",
+  "Envato",
+  "Google",
+  "Material",
+  "Freepik",
+  "ColorHunt",
 ];
 
 class Sponsors extends StatelessWidget {
@@ -36,16 +38,16 @@ Widget _buildUi(double width) {
           return Wrap(
             runSpacing: 50.0,
             spacing: 50.0,
-            children: sponsorsLogo
+            children: tools
                 .map(
-                  (logo) => Container(
-                    height: 20.0,
-                    child: Image.asset(logo),
-                    constraints: BoxConstraints(
-                      // max of 3 per row when on mobile and 5 per row on bigger screens
-                      maxWidth: ScreenHelper.isMobile(context)
-                          ? constraints.maxWidth / 3.0 - 50.0
-                          : constraints.maxWidth / 5.0 - 50.0,
+                  (text) => Padding(
+                    padding: EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      text,
+                      style: AppTextStyle.head.copyWith(
+                        color: kCaptionColor,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 )

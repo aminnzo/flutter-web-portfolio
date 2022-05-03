@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/pages/home/home.dart';
 import 'package:web_portfolio/utils/constants.dart';
@@ -9,6 +8,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  TextTheme getTextTheme(BuildContext context) {
+    return Theme.of(context).textTheme.apply(
+      fontFamily: 'Vazir',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +26,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         primaryColor: kPrimaryColor,
         canvasColor: kBackgroundColor,
-        textTheme: GoogleFonts.latoTextTheme(),
+        textTheme: getTextTheme(context),
+        // textTheme: GoogleFonts.latoTextTheme(),
       ),
       builder: (context, widget) => ResponsiveWrapper.builder(
         ClampingScrollWrapper.builder(context, widget),

@@ -2,28 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/skill.dart';
+import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart",
-    percentage: 62,
-  ),
-  Skill(
-    skill: "Javascript",
-    percentage: 80,
-  ),
-  Skill(
-    skill: "PHP",
-    percentage: 78,
-  ),
-  Skill(
-    skill: "Python",
+    skill: "illustrator",
     percentage: 90,
   ),
   Skill(
-    skill: "GoLang",
+    skill: "photoshop",
+    percentage: 70,
+  ),
+  Skill(
+    skill: "after effect",
+    percentage: 40,
+  ),
+  Skill(
+    skill: "google analytics",
+    percentage: 40,
+  ),
+  Skill(
+    skill: "KW finder",
+    percentage: 80,
+  ),
+  Skill(
+    skill: "coco",
+    percentage: 100,
+  ),
+  Skill(
+    skill: "fl studio",
     percentage: 40,
   ),
 ];
@@ -55,7 +64,7 @@ class SkillSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/person_small.png",
+                    "assets/hand-1.png",
                     width: 300.0,
                   ),
                 ),
@@ -65,12 +74,13 @@ class SkillSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "SKILLS",
-                        style: GoogleFonts.oswald(
+                        "مهارت در ابزارها",
+                        style: AppTextStyle.head.copyWith(
+                          fontFamily: AppTextStyle.peydaFont,
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
                           fontSize: 28.0,
@@ -81,15 +91,15 @@ class SkillSection extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "This is all the skills listed below more will be added in due time. This is all the skills listed below more will be added in due time.",
-                        style: TextStyle(
+                        "میانگین 4 سال تجربه کاری در ابزارهای زیر رو دارم",
+                        style: AppTextStyle.head.copyWith(
                           color: kCaptionColor,
                           height: 1.5,
                           fontSize: 16.0,
                         ),
                       ),
                       SizedBox(
-                        height: 15.0,
+                        height: 25.0,
                       ),
                       Column(
                         children: skills

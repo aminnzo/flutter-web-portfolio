@@ -7,29 +7,29 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<FooterItem> footerItems = [
-  FooterItem(
-    iconPath: "assets/mappin.png",
-    title: "ADDRESS",
-    text1: "999 Carter Street",
-    text2: "Sailor Springs, IL 64234",
-  ),
-  FooterItem(
-    iconPath: "assets/phone.png",
-    title: "PHONE",
-    text1: "+1 618-689-9604",
-    text2: "+1 781-689-9632",
-  ),
+  // FooterItem(
+  //   iconPath: "assets/mappin.png",
+  //   title: "ADDRESS",
+  //   text1: "999 Carter Street",
+  //   text2: "Sailor Springs, IL 64234",
+  // ),
+  // FooterItem(
+  //   iconPath: "assets/phone.png",
+  //   title: "PHONE",
+  //   text1: "+1 618-689-9604",
+  //   text2: "+1 781-689-9632",
+  // ),
   FooterItem(
     iconPath: "assets/email.png",
     title: "EMAIL",
-    text1: "hello@example.com",
-    text2: "info@flutterpanda.com",
+    text1: "mr.amirsani@gmail.com",
+    text2: "",
   ),
   FooterItem(
     iconPath: "assets/whatsapp.png",
     title: "WHATSAPP",
-    text1: "+234 901-134-0095",
-    text2: "+234 901-134-0095",
+    text1: "+98 938-055-0604",
+    text2: "",
   )
 ];
 
@@ -138,49 +138,23 @@ Widget _buildUi(double width, BuildContext context) {
                   Padding(
                     padding: EdgeInsets.only(bottom: 8.0),
                     child: Text(
-                      "Copyright (c) 2021 Michele Harrington. All rights Reserved",
+                      "Copyright (c) 2021 Amir Sani. All rights Reserved",
                       style: TextStyle(
                         color: kCaptionColor,
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {},
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Text(
-                            "Privacy Policy",
-                            style: TextStyle(
-                              color: kCaptionColor,
-                            ),
-                          ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Text(
+                        "2022",
+                        style: TextStyle(
+                          color: kCaptionColor,
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text(
-                          "|",
-                          style: TextStyle(
-                            color: kCaptionColor,
-                          ),
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Text(
-                            "Terms & Conditions",
-                            style: TextStyle(
-                              color: kCaptionColor,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
+                    ),
                   )
                 ],
               )

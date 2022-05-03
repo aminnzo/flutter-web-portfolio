@@ -9,20 +9,20 @@ import 'package:web_portfolio/utils/globals.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
-  HeaderItem(
-    title: "HOME",
-    onTap: () {},
-  ),
-  HeaderItem(title: "MY INTRO", onTap: () {}),
-  HeaderItem(title: "SERVICES", onTap: () {}),
-  HeaderItem(title: "PORTFOLIO", onTap: () {}),
-  HeaderItem(title: "TESTIMONIALS", onTap: () {}),
-  HeaderItem(title: "BLOGS", onTap: () {}),
-  HeaderItem(
-    title: "HIRE ME",
-    onTap: () {},
-    isButton: true,
-  ),
+  // HeaderItem(
+  //   title: "HOME",
+  //   onTap: () {},
+  // ),
+  // HeaderItem(title: "MY INTRO", onTap: () {}),
+  // HeaderItem(title: "SERVICES", onTap: () {}),
+  // HeaderItem(title: "PORTFOLIO", onTap: () {}),
+  // HeaderItem(title: "TESTIMONIALS", onTap: () {}),
+  // HeaderItem(title: "BLOGS", onTap: () {}),
+  // HeaderItem(
+  //   title: "رزومه",
+  //   onTap: () {},
+  //   isButton: true,
+  // ),
 ];
 
 class HeaderLogo extends StatelessWidget {
@@ -37,7 +37,7 @@ class HeaderLogo extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "M",
+                  text: "A",
                   style: GoogleFonts.oswald(
                     color: Colors.white,
                     fontSize: 32.0,
