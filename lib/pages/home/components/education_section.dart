@@ -61,7 +61,7 @@ class EducationSection extends StatelessWidget {
                 "همکاری های من",
                 style: AppTextStyle.head.copyWith(
                   fontFamily: AppTextStyle.peydaFont,
-                  color: Colors.white,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.w900,
                   fontSize: 30.0,
                   height: 1.3,
@@ -110,18 +110,6 @@ class EducationSection extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(height: 5.0),
-                                  Text(
-                                    education.description,
-                                    maxLines: 8,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: AppTextStyle.standard.copyWith(
-                                      color: kCaptionColor,
-                                      height: 1.5,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20.0,
-                                  ),
                                   MouseRegion(
                                     cursor: SystemMouseCursors.click,
                                     child: GestureDetector(
@@ -129,9 +117,21 @@ class EducationSection extends StatelessWidget {
                                       child: Text(
                                         education.linkName,
                                         style: TextStyle(
-                                          color: Colors.white,
+                                          color: kDangerColor,
                                         ),
                                       ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 20.0,
+                                  ),
+                                  Text(
+                                    education.description,
+                                    maxLines: 8,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: AppTextStyle.standard.copyWith(
+                                      color: kCaptionColor,
+                                      height: 1.5,
                                     ),
                                   ),
                                   SizedBox(

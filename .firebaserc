@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "web-portfolio-ddd55"
-  }
+    "default": "web-portfolio-ddd55",
+    "portfolio1": "amir-landing-portfolio"
+  },
+  "targets": {}
 }

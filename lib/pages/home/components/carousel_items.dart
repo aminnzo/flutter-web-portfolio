@@ -18,7 +18,7 @@ List<CarouselItemModel> carouselItems = List.generate(
             "دیجیتال مارکتر",
             style: AppTextStyle.standard.copyWith(
               fontFamily: AppTextStyle.peydaFont,
-              color: kPrimaryColor,
+              color: Colors.white,
               fontWeight: FontWeight.w900,
             ),
             // style: GoogleFonts.oswald(
@@ -113,9 +113,11 @@ List<CarouselItemModel> carouselItems = List.generate(
       ),
     ),
     image: Container(
-      child: Image.asset(
-        "assets/slider-1.png",
-        fit: BoxFit.contain,
+      child: Center(
+        child: Image.asset(
+          "assets/slider-1.png",
+          fit: BoxFit.cover,
+        ),
       ),
     ),
   ),

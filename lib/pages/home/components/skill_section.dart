@@ -81,7 +81,7 @@ class SkillSection extends StatelessWidget {
                         "مهارت در ابزارها",
                         style: AppTextStyle.head.copyWith(
                           fontFamily: AppTextStyle.peydaFont,
-                          color: Colors.white,
+                          color: kPrimaryColor,
                           fontWeight: FontWeight.w900,
                           fontSize: 28.0,
                           height: 1.3,
@@ -114,8 +114,19 @@ class SkillSection extends StatelessWidget {
                                         padding: EdgeInsets.only(left: 10.0),
                                         alignment: Alignment.centerLeft,
                                         height: 38.0,
-                                        child: Text(skill.skill),
-                                        color: Colors.white,
+                                        child: Text(skill.skill, style: AppTextStyle.button,),
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              kDangerColor,
+                                              kPrimaryColor,
+                                            ],
+                                            begin: const FractionalOffset(0.0, 0.0),
+                                            end: const FractionalOffset(1.0, 0.0),
+                                            stops: [0.0, 1.0],
+                                            tileMode: TileMode.clamp,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     SizedBox(

@@ -115,6 +115,19 @@ Widget _buildMobile(BuildContext context, Widget text, Widget image) {
       maxWidth: getMobileMaxWidth(context),
     ),
     width: double.infinity,
-    child: text,
+    child: Stack(
+      children: [
+        Positioned.fill(
+          child: Opacity(
+            opacity: 0.3,
+              child: image),
+        ),
+        Positioned(
+          top: 0,
+            bottom: 0,
+            right: 0,
+            child: text),
+      ],
+    ),
   );
 }

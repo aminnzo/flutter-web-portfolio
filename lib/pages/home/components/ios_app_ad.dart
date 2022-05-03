@@ -51,7 +51,7 @@ class IosAppAd extends StatelessWidget {
                         Text(
                           "Post Insights",
                           style: AppTextStyle.standard.copyWith(
-                            color: kPrimaryColor,
+                            color: kDangerColor,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
@@ -60,7 +60,7 @@ class IosAppAd extends StatelessWidget {
                           "محتوا هدفمند",
                           style: AppTextStyle.head.copyWith(
                             fontFamily: AppTextStyle.peydaFont,
-                            color: Colors.white,
+                            color: kPrimaryColor,
                             fontWeight: FontWeight.w900,
                             height: 1.3,
                             fontSize: 35.0,

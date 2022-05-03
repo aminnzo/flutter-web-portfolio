@@ -34,7 +34,6 @@ final List<DesignProcess> designProcesses = [
 ];
 
 class CvSection extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -80,16 +79,26 @@ class CvSection extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: Text(
-              "دانلود رزومه",
-              style: AppTextStyle.standard.copyWith(
-                fontFamily: AppTextStyle.peydaFont,
-                color: kPrimaryColor,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ),
+              cursor: SystemMouseCursors.click,
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: kDangerColor,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+                  child: Text(
+                    "دانلود رزومه",
+                    style: AppTextStyle.standard.copyWith(
+                      fontFamily: AppTextStyle.peydaFont,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
+              )),
         ),
       ],
     );
@@ -186,21 +195,18 @@ class CvSection extends StatelessWidget {
             direction: Axis.horizontal,
             runSpacing: 10,
             spacing: 50,
-            children: designProcesses.map(
+            children: designProcesses
+                .map(
                   (item) => Container(
-                height: 180,
-                child: _itemBox2(item),
-                constraints: BoxConstraints(
-                  maxWidth: 300,
-                  minWidth: 250
-                ),
-              ),
-            )
+                    height: 180,
+                    child: _itemBox2(item),
+                    constraints: BoxConstraints(maxWidth: 300, minWidth: 250),
+                  ),
+                )
                 .toList(),
           );
         },
       ),
     );
   }
-
 }
