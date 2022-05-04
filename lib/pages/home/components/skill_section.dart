@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/skill.dart';
 import 'package:web_portfolio/utils/app_text_style.dart';
@@ -64,13 +63,14 @@ class SkillSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/hand-1.png",
-                    width: 300.0,
+                    ScreenHelper.isMobile(context) ? "assets/hand-2.png" : "assets/hand-1.png",
+                    height: ScreenHelper.isMobile(context)
+                        ? MediaQuery.of(context).size.width * .8
+                        : MediaQuery.of(context).size.height * .7,
                   ),
                 ),
-                SizedBox(
-                  width: 50.0,
-                ),
+                ScreenHelper.isMobile(context)
+                    ? const SizedBox(height: 40) : const SizedBox(width: 50),
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
                   child: Column(
@@ -91,7 +91,7 @@ class SkillSection extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "میانگین 4 سال تجربه کاری در ابزارهای زیر رو دارم",
+                        "” ابزارها صرفا فقط ابزار نیستند ، آنها مسیر رو هموار میکنند ”",
                         style: AppTextStyle.head.copyWith(
                           color: kCaptionColor,
                           height: 1.5,

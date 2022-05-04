@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
@@ -36,7 +34,7 @@ class IosAppAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "assets/insta-ios-1.png",
+                      ScreenHelper.isMobile(context) ? "assets/insta-ios-2.png" : "assets/insta-ios-1.png",
                       // Set width for image on smaller screen
                       height: 400,
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
@@ -57,7 +55,7 @@ class IosAppAd extends StatelessWidget {
                         ),
                         SizedBox(height: 15.0),
                         Text(
-                          "محتوا هدفمند",
+                          "محتوا\tهدفمند",
                           style: AppTextStyle.head.copyWith(
                             fontFamily: AppTextStyle.peydaFont,
                             color: kPrimaryColor,
@@ -66,11 +64,9 @@ class IosAppAd extends StatelessWidget {
                             fontSize: 35.0,
                           ),
                         ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        SizedBox(height: 10),
                         Text(
-                          "اینجا یک پست آموزشی در حوزه دکوراسیون داخلی رو داریم که در 3 ساعت موفق به جذب از اکسپلور شده و  تعامل بالایی رو ازین پست برای خودش کرده  و اما کاور ,موضوع محتوا ، ادیت و موزیک ، کپشن ، هشتگ ، ساعت انتشار باعث این عملکرد از محتوامون شده.",
+                          "اینجا یک پست آموزشی رو داریم که در 3 ساعت اول ، موفق به جذب از اکسپلور شده و  تعامل بالایی رو ازین محتوا ویدئویی برای خودش کرده . و اما کاور  پست ,موضوع محتوا ، ادیت و موزیک ، کپشن ، هشتگ ، ساعت انتشار باعث این عملکرد از محتوامون شده.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,

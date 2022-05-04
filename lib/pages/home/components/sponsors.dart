@@ -5,7 +5,7 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<String> tools = [
-  "Instagram",
+  "Behance",
   "Envato",
   "Google",
   "Material",

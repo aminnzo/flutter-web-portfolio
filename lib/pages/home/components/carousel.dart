@@ -120,7 +120,14 @@ Widget _buildMobile(BuildContext context, Widget text, Widget image) {
         Positioned.fill(
           child: Opacity(
             opacity: 0.3,
-              child: image),
+              child: Container(
+                child: Center(
+                  child: Image.asset(
+                    "assets/slider-2.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              )),
         ),
         Positioned(
           top: 0,
