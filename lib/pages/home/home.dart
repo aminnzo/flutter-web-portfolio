@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:web_portfolio/pages/home/components/carousel.dart';
 import 'package:web_portfolio/pages/home/components/cv_section.dart';
 import 'package:web_portfolio/pages/home/components/education_section.dart';
@@ -9,8 +8,6 @@ import 'package:web_portfolio/pages/home/components/ios_app_ad.dart';
 import 'package:web_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:web_portfolio/pages/home/components/skill_section.dart';
 import 'package:web_portfolio/pages/home/components/sponsors.dart';
-// import 'package:web_portfolio/pages/home/components/testimonial_widget.dart';
-// import 'package:web_portfolio/pages/home/components/website_ad.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
 
