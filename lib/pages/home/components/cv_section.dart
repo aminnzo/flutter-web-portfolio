@@ -35,7 +35,7 @@ final List<DesignProcess> designProcesses = [
 ];
 
 class CvSection extends StatelessWidget {
-  final Uri _svUrl = Uri.parse('https://google.com');
+  final Uri _svUrl = Uri.parse('https://s6.uupload.ir/files/my_resume-1_fesi.png');
 
   @override
   Widget build(BuildContext context) {

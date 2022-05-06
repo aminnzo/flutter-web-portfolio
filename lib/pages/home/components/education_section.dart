@@ -32,6 +32,7 @@ final List<Education> educationList = [
 ];
 
 class EducationSection extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -143,7 +144,7 @@ class EducationSection extends StatelessWidget {
                     ),
                   );
                 },
-              )
+              ),
             ],
           ),
         ),
