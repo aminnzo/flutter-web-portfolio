@@ -2,33 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/footer_item.dart';
+import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<FooterItem> footerItems = [
-  // FooterItem(
-  //   iconPath: "assets/mappin.png",
-  //   title: "ADDRESS",
-  //   text1: "999 Carter Street",
-  //   text2: "Sailor Springs, IL 64234",
-  // ),
-  // FooterItem(
-  //   iconPath: "assets/phone.png",
-  //   title: "PHONE",
-  //   text1: "+1 618-689-9604",
-  //   text2: "+1 781-689-9632",
-  // ),
   FooterItem(
     iconPath: "assets/email.png",
     title: "EMAIL",
     text1: "mr.amirsani@gmail.com",
-    text2: "",
   ),
   FooterItem(
     iconPath: "assets/whatsapp.png",
     title: "WHATSAPP",
     text1: "+98 938-055-0604",
-    text2: "",
   )
 ];
 
@@ -64,13 +51,14 @@ Widget _buildUi(double width, BuildContext context) {
                   children: footerItems
                       .map(
                         (footerItem) => Container(
-                          height: 120.0,
+                          height: 100,
                           width: ScreenHelper.isMobile(context)
                               ? constraints.maxWidth / 2.0 - 20.0
                               : constraints.maxWidth / 4.0 - 20.0,
                           child: Container(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -92,29 +80,14 @@ Widget _buildUi(double width, BuildContext context) {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
-                                  height: 15.0,
-                                ),
-                                RichText(
-                                  textAlign: TextAlign.start,
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "${footerItem.text1}\n",
-                                        style: TextStyle(
-                                          color: kCaptionColor,
-                                          height: 1.8,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "${footerItem.text2}\n",
-                                        style: TextStyle(
-                                          color: kCaptionColor,
-                                        ),
-                                      )
-                                    ],
+                                SelectableText(
+                                  "${footerItem.text1}\n",
+                                  style: AppTextStyle.standard.copyWith(
+                                    color: kCaptionColor,
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 16.0,
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -137,7 +110,7 @@ Widget _buildUi(double width, BuildContext context) {
                   Padding(
                     padding: EdgeInsets.only(bottom: 8.0),
                     child: Text(
-                      "Copyright (c) 2021 Amir Sani. All rights Reserved",
+                      "Copyright (c) 2022 Amir Sani. All rights Reserved",
                       style: TextStyle(
                         color: kCaptionColor,
                       ),
