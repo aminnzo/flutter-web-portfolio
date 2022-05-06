@@ -1,3 +1,4 @@
+import 'package:fancy_cursor/fancy_cursor.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/pages/home/home.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Amir Sani. Portfolio",
+      title: "Portfolio",
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: Theme.of(context).copyWith(
@@ -43,7 +44,14 @@ class MyApp extends StatelessWidget {
           color: kBackgroundColor,
         ),
       ),
-      home: Home(),
+      home: FancyCursor(
+        color: Colors.white,
+        size: 4,
+        trailSize: 40,
+        trailColor: kPrimaryColor.withOpacity(0.3),
+        trailDelay: Duration(milliseconds: 800),
+        child: Home(),
+      ),
     );
   }
 }
