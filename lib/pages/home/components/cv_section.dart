@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:web_portfolio/models/design_process.dart';
 import 'package:web_portfolio/utils/app_text_style.dart';
 import 'package:web_portfolio/utils/constants.dart';
@@ -34,6 +35,8 @@ final List<DesignProcess> designProcesses = [
 ];
 
 class CvSection extends StatelessWidget {
+  final Uri _svUrl = Uri.parse('https://google.com');
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -77,7 +80,7 @@ class CvSection extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () => _launchCvUrl(),
           child: MouseRegion(
               cursor: SystemMouseCursors.click,
               child: MouseRegion(
@@ -209,4 +212,9 @@ class CvSection extends StatelessWidget {
       ),
     );
   }
+
+  void _launchCvUrl() async {
+    if (!await launchUrl(_svUrl)) throw 'Could not launch $_svUrl';
+  }
+
 }
